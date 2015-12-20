@@ -2,7 +2,10 @@
   "name": "conFusion",
   "private": true,
   "devDependencies": {
-
+    "grunt-contrib-jshint": "^0.11.3",
+    "jit-grunt": "^0.9.1",
+    "jshint-stylish": "^2.1.0",
+    "time-grunt": "^1.2.2"
   },
   "engines": {
     "node": ">=0.10.0"
