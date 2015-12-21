@@ -56,10 +56,14 @@
                 </blockquote>
             </div>
             <div class="col-xs-9 col-xs-offset-1" ng-controller="DishCommentController">
-                    <ul class="list-unstyled">
-						<p>Task 3: Here you include the code to show the live preview of the comment</p>
-						<p>The comment should be shown only when the form contains valid
-						information and is not pristine</p>
+                    <ul class="list-unstyled" ng-show="!commentForm.$invalid">
+						<li>
+						    <blockquote>
+                                <p>{{newComment.rating}} Stars</p>
+                                <p>{{newComment.comment}}</p>
+                                <footer>{{newComment.author}}, {{newComment.date | date : 'MMM. dd, yyyy'}}</footer>
+                            </blockquote>
+						</li>
                     </ul>
                 <form class="form-horizontal" name="commentForm"
                 		ng-submit="submitComment()" novalidate>
