@@ -98,8 +98,8 @@ angular.module('confusionApp')
 
         }])
 
-        .controller('AboutController', ['$scope', function($scope) {
-
+        .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
+            $scope.leaders = corporateFactory.getLeaders();
         }])
 
 ;
