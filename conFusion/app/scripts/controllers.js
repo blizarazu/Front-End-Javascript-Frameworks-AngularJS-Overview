@@ -138,13 +138,35 @@ angular.module('confusionApp')
                 function(response) {
                     $scope.promotionMessage = "Error: "+response.status + " " + response.statusText;
                 }
-            );;
+            );
 
-            $scope.specialist = corporateFactory.getLeader(3);
+            $scope.showSpecialist = false;
+            $scope.specialistMessage="Loading ...";
+            $scope.specialist = corporateFactory.getLeaders().get({id:3})
+            .$promise.then(
+                function(response){
+                    $scope.specialist = response;
+                    $scope.showSpecialist = true;
+                },
+                function(response) {
+                    $scope.specialistMessage = "Error: "+response.status + " " + response.statusText;
+                }
+            );
         }])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
-            $scope.leaders = corporateFactory.getLeaders();
+            $scope.showLeaders = false;
+            $scope.message = "Loading ...";
+
+            corporateFactory.getLeaders().query(
+                function(response){
+                    $scope.leaders = response;
+                    $scope.showLeaders = true;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                }
+            );
         }])
 
 ;
