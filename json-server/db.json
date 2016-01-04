@@ -209,5 +209,32 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "mychannel": "Email",
+      "firstName": "Froga",
+      "lastName": "froga",
+      "agree": true,
+      "email": "froga@froga.com",
+      "tel": {
+        "areaCode": "999",
+        "number": "999999"
+      },
+      "comments": "froga",
+      "id": 1
+    },
+    {
+      "mychannel": "tel",
+      "firstName": "froga2",
+      "lastName": "froga2",
+      "agree": true,
+      "email": "f@e.com",
+      "tel": {
+        "areaCode": "333",
+        "number": "333333"
+      },
+      "comments": "froga",
+      "id": 2
+    }
+  ]
 }
