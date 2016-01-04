@@ -127,7 +127,18 @@ angular.module('confusionApp')
                 }
             );
 
-            $scope.promotion = menuFactory.getPromotion(0);
+            $scope.showPromotion = false;
+            $scope.promotionMessage="Loading ...";
+            $scope.promotion = menuFactory.getPromotions().get({id:0})
+            .$promise.then(
+                function(response){
+                    $scope.promotion = response;
+                    $scope.showPromotion = true;
+                },
+                function(response) {
+                    $scope.promotionMessage = "Error: "+response.status + " " + response.statusText;
+                }
+            );;
 
             $scope.specialist = corporateFactory.getLeader(3);
         }])
