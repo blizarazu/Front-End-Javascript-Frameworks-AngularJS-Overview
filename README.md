@@ -1,2 +1,2 @@
-# Front-End-Javascript-Frameworks-AngularJS-Overview-Coursera
-Front-End Javascript Frameworks: AngularJS Overview Coursera course's exercises
+# Front-End Javascript Frameworks Coursera
+Front-End Javascript Frameworks Coursera course's exercises
